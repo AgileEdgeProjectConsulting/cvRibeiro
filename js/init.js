@@ -141,13 +141,15 @@
 
       $('#image-loader').fadeIn();
 
-      var contactName = $('#contactForm #contactName').val();
+      var contactFirstName = $('#contactForm #contactFirstName').val();
+      var contactLastName = $('#contactForm #contactLastName').val();
+      var contactCompany = $('#contactForm #contactCompany').val();
+      var contactPhone = $('#contactForm #contactPhone').val();
       var contactEmail = $('#contactForm #contactEmail').val();
       var contactSubject = $('#contactForm #contactSubject').val();
       var contactMessage = $('#contactForm #contactMessage').val();
 
-      var data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
-               '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
+      var data = 'contactFirstName=' + contactFirstName + 'contactLastName=' + contactLastName + 'contactCompany=' + contactCompany +'&contactEmail=' + contactEmail + 'contactPhone=' + contactPhone +'&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
 
       $.ajax({
 
