@@ -24,7 +24,7 @@ if($_POST) {
 	// Check Phone
 	if (!preg_match('/^[+]?[1-9][0-9]{9,14}$/', $phone)) {
 		$error['phone'] = "Please enter a valid phone number.";
-
+	}
 	// Check Email
 	if (!preg_match('/^[a-z0-9&\'\.\-_\+]+@[a-z0-9\-]+\.([a-z0-9\-]+\.)*+[a-z]{2}/is', $email)) {
 		$error['email'] = "Please enter a valid email address.";
@@ -38,7 +38,7 @@ if($_POST) {
 
 
    // Set Message
-   $message .= "Email from: " . $firstName + $lastName . "<br />";
+   $message .= "Email from: " . $firstName . "<br />";
 	$message .= "Email address: " . $email . "<br />";
    $message .= "Message: <br />";
    $message .= $contact_message;
