@@ -19,7 +19,7 @@ if($_POST) {
 	}
   	// Check Last Name
 	if (strlen($lastName) < 2) {
-		$error['lasttName'] = "Please enter your last name.";
+		$error['lastName'] = "Please enter your last name.";
 	}
 	// Check Phone
 	if (!preg_match('/^[+]?[1-9][0-9]{9,14}$/', $phone)) {
