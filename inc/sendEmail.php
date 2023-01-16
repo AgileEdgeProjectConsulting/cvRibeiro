@@ -38,14 +38,14 @@ if($_POST) {
 
 
    // Set Message
-   $message .= "Email from: " . $name . "<br />";
+   $message .= "Email from: " . $firstName + $lastName . "<br />";
 	$message .= "Email address: " . $email . "<br />";
    $message .= "Message: <br />";
    $message .= $contact_message;
    $message .= "<br /> ----- <br /> This email was sent from your site's contact form. <br />";
 
    // Set From: header
-   $from =  $name . " <" . $email . ">";
+   $from =  $firstName . " <" . $email . ">";
 
    // Email Headers
 	$headers = "From: " . $from . "\r\n";
@@ -66,7 +66,9 @@ if($_POST) {
 
 	else {
 
-		$response = (isset($error['name'])) ? $error['name'] . "<br /> \n" : null;
+		$response = (isset($error['firstName'])) ? $error['firstName'] . "<br /> \n" : null;
+		$response = (isset($error['lastName'])) ? $error['lasttName'] . "<br /> \n" : null;
+		$response .= (isset($error['phone'])) ? $error['phone'] . "<br /> \n" : null;
 		$response .= (isset($error['email'])) ? $error['email'] . "<br /> \n" : null;
 		$response .= (isset($error['message'])) ? $error['message'] . "<br />" : null;
 		
