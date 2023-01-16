@@ -67,7 +67,7 @@ if($_POST) {
 	else {
 
 		$response = (isset($error['firstName'])) ? $error['firstName'] . "<br /> \n" : null;
-		$response = (isset($error['lastName'])) ? $error['lasttName'] . "<br /> \n" : null;
+		$response = (isset($error['lastName'])) ? $error['lastName'] . "<br /> \n" : null;
 		$response .= (isset($error['phone'])) ? $error['phone'] . "<br /> \n" : null;
 		$response .= (isset($error['email'])) ? $error['email'] . "<br /> \n" : null;
 		$response .= (isset($error['message'])) ? $error['message'] . "<br />" : null;
